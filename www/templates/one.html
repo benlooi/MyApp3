@@ -1,9 +1,12 @@
 <ion-view>
 	<ion-content>
 		<H2>Quiz 1</H2>
+
+
+
 <div class="list">
 	<div class="item" ng-repeat="item in Quiz1 track by $index" ng-show="counter==$index" >
-		{{item.qn_no}}: {{item.question}}
+		<h2>{{item.qn_no}}: {{item.question}}</h2>
 		<div class="item" >
 		<ion-list>
   			<ion-radio ng-repeat="choice in item.choices"  ng-model="item.myans" ng-value="choice.choice" name="{{item.qn_no}}">{{choice.ans}}</ion-radio>
@@ -11,10 +14,19 @@
 		</ion-list>
 			
 		</div>
-		<button class="button button-calm" ng-click="goBack($index)" ng-hide="counter==0">back</button>
-		<button class="button button-calm" ng-click="goNext($index)" ng-disabled="!item.myans" ng-hide="counter==Quiz1.length-1">next</button>
-		<button class="button button-calm" ng-click="checkAnswers()" ng-hide="counter<Quiz1.length-1">submit</button>
+
+		<button class="button button-calm" ng-click="goBack($index)" ng-hide="counter==0" style="float:left">back</button>
+
+		<button class="button button-calm" ng-click="goNext($index)" ng-disabled="!item.myans" ng-hide="counter==Quiz1.length-1" style="float:right">next</button>
+
+		<button class="button button-assertive" ng-click="checkAnswers()" ng-hide="counter<Quiz1.length-1" style="float:right" ng-disabled="!item.myans">submit</button>
 	</div>
+	
+
+
+
+
+
 	<div class="" ng-show="counter>Quiz1.length-1">
 		<h2>You score is {{score}}</h2>
 		<button class="button button-assertive" ng-click="startAgain()">Start again</button>

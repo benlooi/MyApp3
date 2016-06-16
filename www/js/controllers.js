@@ -22,7 +22,7 @@ angular.module('starter.controllers', [])
   		}
   		console.log(score);
   		$scope.score=score;
-      
+
   	}
   	
   }
@@ -37,6 +37,12 @@ angular.module('starter.controllers', [])
 
   $scope.startAgain= function () {
     $scope.counter=0;
+
+    for (var i=0;i<$scope.Quiz1.length;i++){
+
+      $scope.Quiz1[i].myans=null;
+
+    }
   	
   	
 
