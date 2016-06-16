@@ -1,0 +1,36 @@
+[
+	{"qn_no":1,
+	"question":"Who is the Prime Minister of Singapore?",
+	"choices":[
+				{"choice":"A", "ans":"Lee Hsien Loong"},
+				{"choice":"B", "ans":"Tony Tan"},
+				{"choice":"C", "ans":"Chee Soon Juan"},
+				{"choice":"D", "ans":"Ben Looi"}
+			],
+	"answer": "A",
+	"score":5
+	},
+
+	{"qn_no":2,
+	"question":"Who is the President of Singapore ?",
+	"choices":[
+				{"choice":"A", "ans":"Lee Hsien Loong"},
+				{"choice":"B", "ans":"Tony Tan"},
+				{"choice":"C", "ans":"Chee Soon Juan"},
+				{"choice":"D", "ans":"Ben Looi"}
+			],
+	"answer": "B",
+	"score":5
+	},
+	{"qn_no":3,
+	"question":"Who is not a politician...yet?",
+	"choices":[
+				{"choice":"A", "ans":"Lee Hsien Loong"},
+				{"choice":"B", "ans":"Tony Tan"},
+				{"choice":"C", "ans":"Chee Soon Juan"},
+				{"choice":"D", "ans":"Ben Looi"}
+			],
+	"answer": "D",
+	"score":3
+	}
+]
