@@ -1,1 +1,29 @@
 /* Empty. Add your own CSS if you like */
+.box {
+width:100vw;
+height:100vh;
+color:white;
+font-size: 100px;
+font-family: Roboto;
+text-align: center;
+
+
+}
+
+.box .displaytext {
+	position:relative;
+	padding:10px;
+	top:400px;
+	left:100px;
+	width:200px;
+	font-size:20px;
+	font-weight: 100;
+	background-color: black;
+	opacity: 0.75;
+	box-shadow: 5px 5px 60px white;
+}
+
+.box .displaytext h2 {
+	color:white;
+	font-weight: 700
+}

@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('QuizCtrl', function($scope, QuizService,$state) {
+.controller('QuizCtrl', function($scope, QuizService,$state,$cordovaBarcodeScanner) {
   //$scope.answers={};
 
   $scope.counter=0;
@@ -47,4 +47,60 @@ angular.module('starter.controllers', [])
   	
 
   }
-  });
+
+
+///barcode scanner stuff
+document.addEventListener("deviceready", function () {
+$scope.scanBarcode=function () {
+  $cordovaBarcodeScanner
+      .scan()
+      .then(function(barcodeData) {
+        // Success! Barcode data is here
+        $scope.barcode=barcodeData;
+      }, function(error) {
+        // An error occurred
+      });
+
+}
+    
+
+})
+
+})
+
+
+.controller('slidesCtrl',function ($scope,$ionicSlideBoxDelegate){
+$scope.options = {
+  loop: true,
+  effect: 'fade',
+  speed: 500,
+}
+
+$scope.$on("$ionicSlides.slideChangeStart", function(event, data){
+  console.log('Slide change is beginning');
+});
+
+$scope.$on("$ionicSlides.slideChangeEnd", function(event, data){
+  // note: the indexes are 0-based
+  $scope.activeIndex = data.activeIndex;
+  $scope.previousIndex = data.previousIndex;
+});
+
+$scope.myslides = [
+  {title:"Look Good",
+  image:'dentist.jpg',
+  text:"Our dentists are awesome."},
+
+  {title:"Call us now.",
+  image:'doctor.jpg',
+  text:"Our doctors are awesome."},
+  {title:"Enquire today.",
+  image:'dentist.jpg',
+  text:"Our doctors are really awesome."},
+  {title:"Do it.",
+  image:'doctor.jpg',
+  text:"What are you waiting for?"},
+]
+
+})
+;

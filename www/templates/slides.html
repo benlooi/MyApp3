@@ -1,0 +1,26 @@
+<ion-view>
+<ion-content scroll="false">
+
+	<ion-slides options="options" slider="data.slider">
+		
+		<ion-slide-page ng-repeat="slide in myslides">
+			
+			<div class="box" style="background-image:url('./img/{{slide.image}}');background-size:cover;background-repeat:no-repeat">
+
+
+				<div class="displaytext">
+				<h2>{{slide.title}}</h2>
+					{{slide.text}}
+				</div>
+
+				
+			</div>
+		</ion-slide-page>
+		
+		
+		
+		
+
+	</ion-slides>
+</ion-content>
+</ion-view>
