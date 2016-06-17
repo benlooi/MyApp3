@@ -56,7 +56,7 @@ $scope.scanBarcode=function () {
       .scan()
       .then(function(barcodeData) {
         // Success! Barcode data is here
-        $scope.barcode=barcodeData;
+        $scope.barcode=barcodeData.text;
       }, function(error) {
         // An error occurred
       });
@@ -64,7 +64,7 @@ $scope.scanBarcode=function () {
 }
     
 
-})
+},false);
 
 })
 
@@ -102,5 +102,35 @@ $scope.myslides = [
   text:"What are you waiting for?"},
 ]
 
+})
+
+.controller('Quiz2Ctrl',function ($scope){
+
+  $scope.fruits = [
+    {
+      name:"Apple"
+    },
+    {
+      name:"Orange"
+    },
+    {
+      name:"Durian"
+    },
+    {
+      name:"Chiku"
+    }
+
+  ]
+
+  $scope.remove= function (position_in_fruits){
+    $scope.fruits.splice(position_in_fruits,1);
+  }
+
+$scope.fruit={};
+  $scope.add= function (fruit_to_add){
+    var new_fruit_to_add=fruit_to_add;
+    $scope.fruits.unshift(new_fruit_to_add);
+    $scope.fruit=null;
+  }
 })
 ;

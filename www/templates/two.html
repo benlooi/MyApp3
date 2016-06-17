@@ -3,5 +3,16 @@
 		
 
 		this is quiz two
+		<div class="list">
+				<div class="item" ng-repeat="item in fruits track by $index">
+					<h3>{{item.name}}</h3>
+					<p>This is position number {{$index}}</p>
+					<button class="button button-assertive" ng-click="remove($index)">Remove me</button>
+				</div>
+
+		</div>
+
+		<input type="text" ng-model="fruit.name" placeholder="Enter a fruit to add...">
+		<button class="button button-calm" ng-click="add(fruit)">Add a fruit</button>
 	</ion-content>
 </ion-view>

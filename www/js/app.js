@@ -65,7 +65,7 @@ angular.module('starter', ['ionic', 'starter.controllers','services','ngCordova'
       views: {
         'menuContent': {
           templateUrl: 'templates/two.html',
-          controller: 'QuizCtrl'
+          controller: 'Quiz2Ctrl'
         }
       }
     })
